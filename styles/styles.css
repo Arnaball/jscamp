@@ -84,7 +84,7 @@ select {
   padding-right: 2.5rem;
 
   &:hover {
-    background-color: var(--primary-hover);
+    scale: 1.05;
     color: white;
   }
 
