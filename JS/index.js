@@ -36,9 +36,9 @@ filtros.forEach(filtro => {
 
 
         if(tecnologia === valorSeleccionado || valorSeleccionado === '') {
-            job.style.display = 'flex';
+            job.classList.remove("hidden")
         } else {
-            job.style.display = 'none';
+            job.classList.add("hidden");
         }
    });
 })
