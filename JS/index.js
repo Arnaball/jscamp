@@ -32,14 +32,8 @@ filtros.forEach(filtro => {
 
    jobs.forEach(job => {
         const tecnologia = job.dataset.tecnologia; // loguea la tecnologia del job que está almacenando
-        // También se puede utilizar job.getAttribute('data-tecnologia')
-
-
-        if(tecnologia === valorSeleccionado || valorSeleccionado === '') {
-            job.classList.remove("hidden")
-        } else {
-            job.classList.add("hidden");
-        }
+        const seMuestra = valorSeleccionado === ""  || valorSeleccionado === tecnologia;
+        job.classList.toggle("is-hidden", !seMuestra)
    });
 })
 })
