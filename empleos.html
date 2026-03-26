@@ -1,144 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Jobs - Empleos</title>
-    <meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores.">
+    <meta
+      name="description"
+      content="Encuentra las mejores ofertas de trabajo para desarrolladores."
+    />
     <!-- Etiquetas link -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" />
 
-    <script type='module' src="JS/index.js"></script>
-
-</head>
-<body>
+    <script type="module" src="JS/index.js"></script>
+  </head>
+  <body>
     <header>
-        <h1 class="logo">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
-            DevJobs
-        </h1>
+      <h1 class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 8l-4 4l4 4" />
+          <path d="M17 8l4 4l-4 4" />
+          <path d="M14 4l-4 16" />
+        </svg>
+        DevJobs
+      </h1>
 
-        <nav>
-           <!--  <a href="">Inicio</a> -->
-            <a href="">Empleos</a>
-        </nav>
+      <nav>
+        <!--  <a href="">Inicio</a> -->
+        <a href="">Empleos</a>
+      </nav>
 
-        <div>
-          <!--   <a href="">Iniciar sesión</a> -->
-            <a href="">Publicar un empleo</a>
-        </div>
+      <div>
+        <!--   <a href="">Iniciar sesión</a> -->
+        <a href="">Publicar un empleo</a>
+      </div>
     </header>
     <main id="empleos-main">
-        <section>
-                <h1>Encuentra tu próximo trabajo</h1>
-                <p>Explora miles de ofertas de trabajo de las mejores empresas de todo el mundo.</p>
-            
-                <form id="empleos-search-form" role="search">
-                    <div class="search_bar empleos-search-bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
-                        <input id="search-input" name="search" required type="text" placeholder="Buscar empleo por título, habilidad o empresa.">
-                    </div>
-                    <div class="filter_bar">
-                        <select name="tecnologias" class="filter-select" id="tecnologiasFilter">
-                            <option value="">Tecnologías</option>
-                            <hr>
-                                <option value="html">HTML</option>
-                                <option value="css">CSS</option>
-                                <option value="javascript">JavaScript</option>
-                                <option value="python">Python</option>
-                                <option value="java">Java</option>
-                            <hr>
-                                <option value="react">React</option>
-                                <option value="nodejs">Node.js</option>
-                        </select>
+      <section>
+        <h1>Encuentra tu próximo trabajo</h1>
+        <p>
+          Explora miles de ofertas de trabajo de las mejores empresas de todo el
+          mundo.
+        </p>
 
-                        <select name="ubicacion" class="filter-select" id="ubicacionFilter">
-                            <option value="madrid">Madrid</option>
-                            <option value="barcelona">Barcelona</option>
-                            <option value="valencia">Valencia</option>
-                            <option value="sevilla">Sevilla</option>
-                            <option value="malaga">Málaga</option>
-                        </select>
+        <form id="empleos-search-form" role="search">
+          <div class="search_bar empleos-search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            <input
+              id="search-input"
+              name="search"
+              required
+              type="text"
+              placeholder="Buscar empleo por título, habilidad o empresa."
+            />
+          </div>
+          <div class="filter_bar">
+            <select
+              name="tecnologias"
+              class="filter-select"
+              id="tecnologiasFilter"
+            >
+              <option value="">Tecnologías</option>
+              <hr />
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <hr />
+              <option value="react">React</option>
+              <option value="nodejs">Node.js</option>
+            </select>
 
-                        <select name="tipo de trabajo" class="filter-select" id="tipoDeTrabajoFilter">
-                            <option value="full-time">Full-time</option>
-                            <option value="part-time">Part-time</option>
-                            <option value="freelance">Freelance</option>
-                            <option value="remote">Remote</option>
-                        </select>
+            <select name="ubicacion" class="filter-select" id="ubicacionFilter">
+              <option value="madrid">Madrid</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="valencia">Valencia</option>
+              <option value="sevilla">Sevilla</option>
+              <option value="malaga">Málaga</option>
+            </select>
 
-                        <select name="nivel" class="filter-select" id="nivelFilter">
-                            <option value="junior">Junior</option>
-                            <option value="mid">Mid</option>
-                            <option value="senior">Senior</option>
-                            <option value="expert">Expert</option>
-                        </select>
-                    </div>
-                </form>
-                
-                <p id="resultado-busqueda"></p>
+            <select
+              name="tipo de trabajo"
+              class="filter-select"
+              id="tipoDeTrabajoFilter"
+            >
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="freelance">Freelance</option>
+              <option value="remote">Remote</option>
+            </select>
 
-        </section>
-        <section class="job-search">
-            <h2>Resultados de búsqueda</h2>
+            <select name="nivel" class="filter-select" id="nivelFilter">
+              <option value="junior">Junior</option>
+              <option value="mid">Mid</option>
+              <option value="senior">Senior</option>
+              <option value="expert">Expert</option>
+            </select>
+          </div>
+        </form>
+
+        <p id="resultado-busqueda"></p>
+      </section>
+      <section class="job-search">
+        <h2>Resultados de búsqueda</h2>
 
         <div class="job-listing">
-
-            <article data-tecnologia="html" class="job-card">
-                    <div>
-                        <h3>Ingeniero de software</h3>
-                        <small>
-                            Google | Madrid | Full-time | Senior  | HTML
-                        </small>
-                        <p>Estamos buscando un ingeniero de software con 5 años de experiencia en desarrollo de software. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                    </div>
-                    <button class="button-apply-job">Aplicar</button>
-            </article>
-            
-            <article data-tecnologia="css" class="job-card">
-                <div>
-                    <h3>Ingeniero de software</h3>
-                    <small>
-                        Google | Madrid | Full-time | Senior
-                    </small>
-                    <p>Estamos buscando un ingeniero de software con 5 años de experiencia en desarrollo de software. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                </div>
-                <button class="button-apply-job">Aplicar</button>
-            </article>
-
-            <article data-tecnologia="javascript" class="job-card">
+          <article data-tecnologia="html" class="job-card">
             <div>
-                <h3>Ingeniero de software</h3>
-                <small>
-                    Google | Guadalajara | Full-time | Senior
-                </small>
-                <p>Estamos buscando un ingeniero de software con 5 años de experiencia en desarrollo de software. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+              <h3>Ingeniero de software</h3>
+              <small> Google | Madrid | Full-time | Senior | HTML </small>
+              <p>
+                Estamos buscando un ingeniero de software con 5 años de
+                experiencia en desarrollo de software. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quisquam, quos.
+              </p>
             </div>
             <button class="button-apply-job">Aplicar</button>
-            </article>
+          </article>
 
+          <article data-tecnologia="css" class="job-card">
+            <div>
+              <h3>Ingeniero de software</h3>
+              <small> Google | Madrid | Full-time | Senior </small>
+              <p>
+                Estamos buscando un ingeniero de software con 5 años de
+                experiencia en desarrollo de software. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quisquam, quos.
+              </p>
+            </div>
+            <button class="button-apply-job">Aplicar</button>
+          </article>
+
+          <article data-tecnologia="javascript" class="job-card">
+            <div>
+              <h3>Ingeniero de software</h3>
+              <small> Google | Guadalajara | Full-time | Senior </small>
+              <p>
+                Estamos buscando un ingeniero de software con 5 años de
+                experiencia en desarrollo de software. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quisquam, quos.
+              </p>
+            </div>
+            <button class="button-apply-job">Aplicar</button>
+          </article>
         </div>
 
         <nav class="pagination">
-           <a href="">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
-           </a>
-            <a href="" class="is-active">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-            </a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M15 6l-6 6l6 6" />
+            </svg>
+          </a>
+          <a href="" class="is-active">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">5</a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 6l6 6l-6 6" />
+            </svg>
+          </a>
         </nav>
- 
-        </section>
+      </section>
     </main>
     <footer>
-        <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
     </footer>
-    
-</body>
-
+  </body>
 </html>

@@ -1,42 +1,44 @@
-const seccionEmpleos = document.querySelector('.job-listing');
+const seccionEmpleos = document.querySelector(".job-listing");
 
-const filtros = document.querySelectorAll('.filter-select');
+const filtros = document.querySelectorAll(".filter-select");
 
-const searchInput = document.querySelector('#search-input');
+const searchInput = document.querySelector("#search-input");
 
-const searchForm = document.querySelector('#empleos-search-form');
+const searchForm = document.querySelector("#empleos-search-form");
 
-const jobs = document.querySelectorAll('.job-card');
+const jobs = document.querySelectorAll(".job-card");
 
-const resultadoBusqueda = document.querySelector('#resultado-busqueda');
+const resultadoBusqueda = document.querySelector("#resultado-busqueda");
 
-seccionEmpleos?.addEventListener('click' , (event) => {
-    const element = event.target; 
-    if(element.classList.contains('button-apply-job')) { 
-        element.classList.add('is-applied');
-        element.textContent = 'Aplicado!';
-        element.disabled = true;
-     }
-})
+seccionEmpleos?.addEventListener("click", (event) => {
+  const element = event.target;
+  if (element.classList.contains("button-apply-job")) {
+    element.classList.add("is-applied");
+    element.textContent = "Aplicado!";
+    element.disabled = true;
+  }
+});
 
-
-filtros.forEach(filtro => {
-    filtro.addEventListener('change' , (e) => {
-    
+filtros.forEach((filtro) => {
+  filtro.addEventListener("change", (e) => {
     const valorSeleccionado = filtro.value;
 
     if (valorSeleccionado) {
-        console.log('has seleccionado: ' , valorSeleccionado) // loguea el valor que se selecciona del filtro
-        resultadoBusqueda.textContent = `Has seleccionado: ${valorSeleccionado}`;
+      console.log("has seleccionado: ", valorSeleccionado); // loguea el valor que se selecciona del filtro
+      resultadoBusqueda.textContent = `Has seleccionado: ${valorSeleccionado}`;
     }
 
-   jobs.forEach(job => {
-        const tecnologia = job.dataset.tecnologia; // loguea la tecnologia del job que está almacenando
-        const seMuestra = valorSeleccionado === ""  || valorSeleccionado === tecnologia;
-        job.classList.toggle("is-hidden", !seMuestra)
-   });
-})
-})
+    jobs.forEach((job) => {
+      const tecnologia = job.dataset.tecnologia; // loguea la tecnologia del job que está almacenando
+      const seMuestra =
+        valorSeleccionado === "" || valorSeleccionado === tecnologia;
+      job.classList.toggle("is-hidden", !seMuestra);
+    });
+  });
+});
 
-
-
+fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+  .then((res) => {
+    return res.json();
+  })
+  .then((res) => console.log(res));
