@@ -37,8 +37,10 @@ filtros.forEach((filtro) => {
   });
 });
 
-fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+fetch("./json/data.json") // El fetch es asíncrono
   .then((res) => {
     return res.json();
   })
-  .then((res) => console.log(res));
+  .then((jobs) => {
+    console.log(jobs);
+  });
