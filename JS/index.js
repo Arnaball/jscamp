@@ -6,9 +6,9 @@ const searchInput = document.querySelector("#search-input");
 
 const searchForm = document.querySelector("#empleos-search-form");
 
-const jobs = document.querySelectorAll(".job-card");
-
 const resultadoBusqueda = document.querySelector("#resultado-busqueda");
+
+const jobListingContainer = document.querySelector(".job-listing");
 
 seccionEmpleos?.addEventListener("click", (event) => {
   const element = event.target;
@@ -21,14 +21,17 @@ seccionEmpleos?.addEventListener("click", (event) => {
 
 filtros.forEach((filtro) => {
   filtro.addEventListener("change", (e) => {
-    const valorSeleccionado = filtro.value;
+    const jobs = document.querySelectorAll(".job-listing-card");
 
+    const valorSeleccionado = filtro.value;
+    console.log("Se ha tratado de filtrar");
     if (valorSeleccionado) {
       console.log("has seleccionado: ", valorSeleccionado); // loguea el valor que se selecciona del filtro
       resultadoBusqueda.textContent = `Has seleccionado: ${valorSeleccionado}`;
     }
 
     jobs.forEach((job) => {
+      console.log("job");
       const tecnologia = job.dataset.tecnologia; // loguea la tecnologia del job que está almacenando
       const seMuestra =
         valorSeleccionado === "" || valorSeleccionado === tecnologia;
@@ -42,5 +45,23 @@ fetch("./json/data.json") // El fetch es asíncrono
     return res.json();
   })
   .then((jobs) => {
-    console.log(jobs);
+    jobs.forEach((job) => {
+      const article = document.createElement("article");
+      article.className = "job-listing-card";
+      article.dataset.modalidad = job.data.modalidad;
+      article.dataset.nivel = job.data.nivel;
+      article.dataset.technology;
+
+      article.innerHTML = `
+       <div>
+              <h3>${job.titulo}</h3>
+              <small> ${job.empresa} | ${job.ubicacion} |${job.data.nivel} </small>
+              <p>
+                ${job.descripcion}
+              </p>
+            </div>
+            <button class="button-apply-job">Aplicar</button>
+            `;
+      jobListingContainer.appendChild(article);
+    });
   });
