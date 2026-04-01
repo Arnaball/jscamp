@@ -11,7 +11,6 @@ class DevJobsAvatar extends HTMLElement {
 
     const URL = this.createURL(service, name);
 
-    console.log({ service, name, size });
     this.shadowRoot.innerHTML = `
         <img
         src = ${URL}

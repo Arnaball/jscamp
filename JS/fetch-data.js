@@ -6,15 +6,21 @@ fetch("./json/data.json") // El fetch es asíncrono
   })
   .then((jobs) => {
     jobs.forEach((job) => {
-      const article = document.createElement("article");
-      article.className = "job-listing-card";
-      article.dataset.modalidad = job.data.modalidad;
-      article.dataset.nivel = job.data.nivel;
-      article.dataset.technology;
+      buildJobArticle(job);
+    });
+  });
 
-      article.innerHTML = `
+function buildJobArticle(job) {
+  const article = document.createElement("article");
+  article.className = "job-listing-card";
+  article.dataset.modalidad = job.data.modalidad;
+  article.dataset.nivel = job.data.nivel;
+  article.dataset.technology;
+
+  article.innerHTML = `
        <div>
-              <h3>${job.titulo}</h3>
+              <h3>
+              ${job.titulo}</h3>
               <small> ${job.empresa} | ${job.ubicacion} |${job.data.nivel} </small>
               <p>
                 ${job.descripcion}
@@ -22,6 +28,5 @@ fetch("./json/data.json") // El fetch es asíncrono
             </div>
             <button class="button-apply-job">Aplicar</button>
             `;
-      jobListingContainer.appendChild(article);
-    });
-  });
+  jobListingContainer.appendChild(article);
+}
