@@ -15,13 +15,13 @@ function buildJobArticle(job) {
   article.className = "job-listing-card";
   article.dataset.modalidad = job.data.modalidad;
   article.dataset.nivel = job.data.nivel;
-  article.dataset.technology;
+  article.dataset.technology = JSON.stringify(job.data.technology);
 
   article.innerHTML = `
        <div>
               <h3>
               ${job.titulo}</h3>
-              <small> ${job.empresa} | ${job.ubicacion} |${job.data.nivel} </small>
+              <small> ${job.empresa} | ${job.ubicacion} | ${job.data.nivel} </small>
               <p>
                 ${job.descripcion}
               </p>
