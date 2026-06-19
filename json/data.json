@@ -1,0 +1,50 @@
+[
+  {
+    "id": "7a4d1d8b-1e45-4d8c-9f1a-8c2f932121a4",
+    "titulo": "Desarrollador de Software Senior",
+    "empresa": "Tech Solutions Inc.",
+    "ubicacion": "Remoto",
+    "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+    "data": {
+      "technology": ["react", "node", "javascript"],
+      "modalidad": "remoto",
+      "nivel": "senior"
+    }
+  },
+  {
+    "id": "7a4d1d8b-1e45-4d8c-9f1a-8c2agaaads414a",
+    "titulo": "Desarrollador de Software Senior",
+    "empresa": "Tech Solutions Inc.",
+    "ubicacion": "Remoto",
+    "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+    "data": {
+      "technology": ["react", "node", "javascript"],
+      "modalidad": "sevilla",
+      "nivel": "mid-level"
+    }
+  },
+  {
+    "id": "7a4d1d8b-1e45-4d8c-9f1a-adsgss242faas",
+    "titulo": "Desarrollador de Mi casa",
+    "empresa": "Tech Solutions Inc.",
+    "ubicacion": "Remoto",
+    "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+    "data": {
+      "technology": ["html", "node", "javascript"],
+      "modalidad": "madrid",
+      "nivel": "junior"
+    }
+  },
+  {
+    "id": "7a4d1d8b-1e45-4d8c-9f1a-435sadsgsdf214a",
+    "titulo": "Desarrollador de Software Senior",
+    "empresa": "Tech Solutions Inc.",
+    "ubicacion": "Remoto",
+    "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+    "data": {
+      "technology": ["react", "node", "javascript"],
+      "modalidad": "gaudalajara",
+      "nivel": "senior"
+    }
+  }
+]

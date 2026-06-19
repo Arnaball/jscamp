@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Jobs - Empleos</title>
+    <meta
+      name="description"
+      content="Encuentra las mejores ofertas de trabajo para desarrolladores."
+    />
+    <!-- Etiquetas link -->
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <script type="module" src="JS/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 8l-4 4l4 4" />
+          <path d="M17 8l4 4l-4 4" />
+          <path d="M14 4l-4 16" />
+        </svg>
+        DevJobs
+      </h1>
+
+      <nav>
+        <!--  <a href="">Inicio</a> -->
+        <a href="">Empleos</a>
+      </nav>
+
+      <div>
+        <!--   <a href="">Iniciar sesión</a> -->
+        <dev-jobs-avatar service="x" name="midudev" size="32"></dev-jobs-avatar>
+        <dev-jobs-avatar
+          service="github"
+          name="midudev"
+          size="24"
+        ></dev-jobs-avatar>
+      </div>
+    </header>
+    <main id="empleos-main">
+      <section>
+        <h1>Encuentra tu próximo trabajo</h1>
+        <p>
+          Explora miles de ofertas de trabajo de las mejores empresas de todo el
+          mundo.
+        </p>
+
+        <form id="empleos-search-form" role="search">
+          <div class="search_bar empleos-search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            <input
+              id="search-input"
+              name="search"
+              required
+              type="text"
+              placeholder="Buscar empleo por título, habilidad o empresa."
+            />
+          </div>
+          <div class="filter_bar">
+            <select
+              name="technology"
+              class="filter-select"
+              id="tecnologiasFilter"
+            >
+              <option value="">Tecnologías</option>
+              <hr />
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <hr />
+              <option value="react">React</option>
+              <option value="nodejs">Node.js</option>
+            </select>
+
+            <select name="modalidad" class="filter-select" id="ubicacionFilter">
+              <option value="">Lugar</option>
+              <option value="madrid">Madrid</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="valencia">Valencia</option>
+              <option value="sevilla">Sevilla</option>
+              <option value="malaga">Málaga</option>
+            </select>
+
+            <select
+              name="tipo de trabajo"
+              class="filter-select"
+              id="tipoDeTrabajoFilter"
+            >
+              <option value="">Tiempo</option>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="freelance">Freelance</option>
+              <option value="remote">Remote</option>
+            </select>
+
+            <select name="nivel" class="filter-select" id="nivelFilter">
+              <option value="">Nivel</option>
+              <option value="junior">Junior</option>
+              <option value="mid">Mid</option>
+              <option value="senior">Senior</option>
+              <option value="expert">Expert</option>
+            </select>
+          </div>
+        </form>
+
+        <p id="resultado-busqueda"></p>
+      </section>
+      <section class="job-search">
+        <h2>Resultados de búsqueda</h2>
+
+        <div class="job-listing">
+          <!--  Aquí se van a poner los empleos dinámicos -->
+        </div>
+
+        <nav class="pagination">
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M15 6l-6 6l6 6" />
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 6l6 6l-6 6" />
+            </svg>
+          </a>
+        </nav>
+      </section>
+    </main>
+    <footer>
+      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+    </footer>
+  </body>
+</html>
