@@ -25,12 +25,23 @@
     <script type="text/babel" data-type="module">
       import React from "react";
       import ReactDOMClient from "reactDOMClient";
+
       // Componente JobCard con múltiples props
       function JobCard({ data, titulo, empresa, ubicacion, descripcion }) {
+        // Hooks
+        const [isApplied, handleAplied] = React.useState(false);
+
+        function handleClick() {
+          handleAplied(!isApplied);
+        }
+
+        const text = isApplied ? "Aplicado" : "Aplicar";
+        const buttonClassApply = `${isApplied ? "is-applied" : ""}?`;
+
         return (
           <article
             data-modalidad={data?.modalidad}
-            data-nivel={data.nivel}
+            data-nivel={data?.nivel}
             data-technology={data?.technology}
             className="job-listing-card"
           >
@@ -41,7 +52,13 @@
               </small>
               <p>{descripcion}</p>
             </div>
-            <button className="button-apply-job">Aplicar</button>
+            <button
+              disabled={isApplied}
+              className={`button-apply-job ${buttonClassApply}`}
+              onClick={handleClick}
+            >
+              {text}
+            </button>
           </article>
         );
       }
